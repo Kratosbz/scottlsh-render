@@ -28,8 +28,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors({
-  origin: 'http://127.0.0.1:5506', // ⚠️ EXACT origin
-  credentials: true
+    origin: [
+        'http://127.0.0.1:5506',
+        'http://localhost:5506',
+        'https://www.pipscans.com',
+        'https://pipscans.com'
+    ],
+    credentials: true
 }));
 
 app.use("/", indexRouter);
