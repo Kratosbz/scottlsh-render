@@ -62,7 +62,7 @@ router.get('/kyc/fetch-images', async (req, res) => {
   }
 });
 
-router.put("/:_id/approve", async (req, res) => {
+router.put("/kyc/:_id/approve", async (req, res) => {
   try {
     const { _id } = req.params;
     console.log("🔹 Approving KYC for user ID:", _id);
@@ -124,7 +124,7 @@ router.put("/:_id/approve", async (req, res) => {
   }
 });
 
-router.put("/:_id/reject", async (req, res) => {
+router.put("/kyc/:_id/reject", async (req, res) => {
   try {
     const { _id } = req.params;
     console.log("🔹 Rejecting KYC for user ID:", _id);
