@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const UsersDatabase = require("../../models/User");
 
 // Create a MongoDB model for storing image URLs
 const Image = mongoose.model('Image', {
