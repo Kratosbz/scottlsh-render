@@ -52,6 +52,7 @@ app.use("/deposits",    depositRouter);
 app.use("/admin",    adminRouter);
 app.use("/withdrawals", withdrawalRouter);
 app.use("/traders", tradersRouter);
+app.use("/auth", kycAuthRouter);
 // database setup
 mongoose.connect(process.env.DB_CONNECTION_STRING, {
   useNewUrlParser: true,
